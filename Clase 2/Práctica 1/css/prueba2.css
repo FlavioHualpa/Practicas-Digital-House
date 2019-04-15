@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+.contenedor {
+  background-color: #E8FFF8;
+  border: 3px dashed #D0FFA0;
+  border-radius: 6px;
+  width: 1000px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.columna {
+  background-color: #E8E8F8;
+  border: 3px dashed #D9CEB0;
+  border-radius: 6px;
+  width: 22%;
+  height: 150px;
+  margin: 8px 1.5%;
+  float: left;
+}
+
+.formulario {
+  background-color: #f6f6f6;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  width: 800px;
+  margin: 20px auto;
+}
+
+.form-titulo {
+  background-color: red;
+  border-radius: 6px 6px 0px 0px;
+  margin: 0;
+  padding: 12px;
+  color: white;
+  text-align: center;
+}
+
+.form-panel {
+  width: calc(50% - 16px);
+  margin: 0px 8px;
+  float: left;
+}
+
+.form-item {
+  height: 60px;
+}
+
+.form-enviar {
+  font-size: 14pt;
+  padding: 4px 16px;
+  border-radius: 5px;
+  border: 1px solid #8080a0;
+}
+
+body {
+  font-family: Trebuchet MS;
+  font-size: 14pt;
+}
+
+label {
+  font-size: 9pt;
+  text-transform: uppercase;
+}
+
+input,
+select,
+textarea {
+  font-family: Trebuchet MS;
+  font-size: 14pt;
+  width: 100%;
+  padding: 3px;
+}

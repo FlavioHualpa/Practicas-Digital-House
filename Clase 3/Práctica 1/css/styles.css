@@ -1,0 +1,189 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* header */
+.encabezado {
+  background-color: black;
+  overflow: hidden;
+}
+
+/* header img */
+.logo {
+  float: left;
+  width: 120px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+/* header ul */
+.navegacion {
+  float: right;
+  list-style-type: none;
+  overflow: hidden;
+  margin-right: 20px;
+  margin-top: 19px;
+}
+
+/* header ul li */
+.item-navegacion {
+  float: left;
+  padding: 4px 12px;
+  font-size: 20px;
+}
+
+/* header ul li a */
+.link-navegacion {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* header ul li a:hover */
+.link-navegacion:hover {
+  color: orange;
+}
+
+/* main */
+main {
+  background-image: url(../img/fondoSeccion.jpg);
+  background-size: cover;
+  height: 800px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+main p {
+  height: 300px;
+}
+
+section.servicios p {
+  height: 150px;
+}
+
+section.servicios h4,
+section.contacto h4 {
+  font-size: 22px;
+  font-style: italic;
+}
+
+main h2 {
+  font-size: 30px;
+}
+
+section.servicios h2,
+section.contacto h2 {
+  font-size: 40px;
+}
+
+main h1 {
+  font-size: 60px;
+}
+
+main a {
+  display: block;
+  color: white;
+  background-color: orange;
+  text-decoration: none;
+  width: 240px;
+  margin: 0 auto;
+  padding: 10px 30px;
+  border-radius: 9px;
+  font-size: 20px;
+}
+
+/* section.servicios */
+.servicios {
+  height: 800px;
+  text-align: center;
+}
+
+/* section.servicios div */
+.articulos {
+  overflow: hidden;
+  width: 90%;
+  margin: 60px auto 0 auto;
+}
+
+/* section.servicios div  article */
+.servicio {
+  float: left;
+  width: 28%;
+  margin: 0 2.5%;
+}
+
+/* section.servicios div  article div */
+.borde-circular
+{
+  width: 130px;
+  height: 130px;
+  border: 3px solid orange;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+}
+
+/* section.servicios div  article div i */
+.icono
+{
+  font-size: 72px;
+  color: orange;
+  padding-top: 24px;
+}
+
+/* section.contacto */
+.contacto {
+  height: 800px;
+  text-align: center;
+  background-image: url(../img/map-image.png);
+  background-position: center;
+  background-size: cover;
+  background-color: #AAA;
+}
+
+section.contacto h2 {
+  text-transform: uppercase;
+  padding-top: 100px;
+}
+
+section.contacto h4 {
+  padding-bottom: 40px;
+}
+
+section.contacto p {
+  margin-top: 12px;
+}
+
+.form-container {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 18pt;
+}
+
+.form-container button {
+  background-color: #0060C0;
+  border: 1px solid #0000A0;
+  border-radius: 8px;
+  padding: 6px 24px;
+  font-size: 18pt;
+  color: #D0D0D0;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #0050B0;
+}
+
+.form-container button:active {
+  background-color: #4060C0;
+}

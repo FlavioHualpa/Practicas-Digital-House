@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cajas y Floats</title>
+  <link rel="stylesheet" href="css/prueba2.css">
+</head>
+<body>
+  <div class="contenedor">
+    <div class="columna"></div>
+    <div class="columna"></div>
+    <div class="columna"></div>
+    <div class="columna"></div>
+  </div>
+  <p></p>
+  <div class="formulario">
+    <h2 class="form-titulo">DATOS DEL PASAJERO</h2>
+    <form action="consulta.html" method="post">
+      <div style="overflow: hidden;">
+        <div class="form-panel">
+          <p class="form-item">
+            <label for="nombre">nombre *</label>
+            <br>
+            <input type="text" id="nombre" name="nombre" required>
+          </p>
+          <p class="form-item">
+            <label for="tipodoc">tipo de documento *</label>
+            <br>
+            <select name="tipodoc" id="tipodoc" required>
+              <option value="dni">DNI</option>
+              <option value="pasap">PASPORTE</option>
+              <option value="le">LIBRETA DE ENROLAMIENTO</option>
+            </select>
+          </p>
+          <p class="form-item">
+            <label for="email">e-mail *</label>
+            <br>
+            <input type="email" id="email" name="email" required>
+          </p>
+          <p class="form-item">
+            <label>primer viaje? *</label>
+            <br>
+            <input type="radio" name="primerviaje" value="pvs" style="width: auto;" required checked><span> Sí </span>
+            <input type="radio" name="primerviaje" value="pvn" style="width: auto;" required chequed><span> No </span>
+          </p>
+          <p>
+            <button type="submit" class="form-enviar">ENVIAR</button>
+          </p>
+        </div>
+        <div class="form-panel">
+          <p class="form-item">
+            <label for="apellido">apellido *</label>
+            <br>
+            <input type="text" id="apellido" name="apellido" required>
+          </p>
+          <p class="form-item">
+            <label for="nrodoc">nro de documento *</label>
+            <br>
+            <input type="number" id="nrodoc" name="nrodoc" required>
+          </p>
+          <p class="form-item">
+            <label for="nrocelu">nro de celular *</label>
+            <br>
+            <input type="telephone" id="nrocelu" name="nrocelu" required>
+          </p>
+          <p class="form-item">
+            <label for="coddesc">código de descuento</label>
+            <br>
+            <input type="text" id="coddesc" name="coddesc">
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

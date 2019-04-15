@@ -1,0 +1,159 @@
+/* PAGINA 1 */
+
+body {
+  background-image: url(../img/bg-2.png);
+  font-family: 'Open Sans';
+}
+
+input,
+select {
+  font-family: 'Open Sans';
+  padding: 2px 6px;
+  width: 100%;
+  outline: none;
+}
+
+label {
+  line-height: 1.6;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.encabezado {
+  background-color: red;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.logo {
+  float: left;
+  margin: 7px;
+}
+
+.menu-izq {
+  float: left;
+  margin: 0px;
+  padding-left: 16px;
+}
+
+.menu-der {
+  float: right;
+  margin: 0px;
+  padding-left: 10px;
+}
+
+.menu-item {
+  list-style: none;
+  display: inline-block;
+  /* margin-right: 12px; */
+  padding: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #e00000;
+}
+
+.columna-izq {
+  background-color: white;
+  width: 800px;
+  float: left;
+  overflow: hidden;
+}
+
+.columna-der {
+  width: 320px;
+  float: right;
+}
+
+.producto {
+  float: left;
+  width: 380px;
+  margin: 10px;
+}
+
+.titulo-prod {
+  margin: 8px 0px;
+  font-size: 1.3em;
+}
+
+.titulo-tutorial {
+  margin: 0px;
+}
+
+.desc-prod {
+  margin: 5px 0px;
+}
+
+.imagen-prod {
+  width: 380px;
+}
+
+.boton-mas-info {
+  margin: 10px 0px;
+  padding: 6px 12px;
+  background-color: red;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.boton-mas-info:hover {
+  background-color: purple;
+}
+
+.borde-azul {
+  background-color: white;
+  border: 1px solid #8080ff;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.mb12 {
+  margin-bottom: 12px;
+}
+
+.mb2 {
+  margin-bottom: 2px;
+}
+
+/* PAGINA 2 */
+
+.container2 {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.boton-enviar {
+  padding: 8px 20px;
+  background-color: DodgerBlue;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.boton-cancelar {
+  padding: 8px 20px;
+  background-color: #f0f0f0;
+  color: DodgerBlue;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}

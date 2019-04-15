@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Nuestros Servicios</title>
+</head>
+<body>
+  <header class="encabezado">
+    <img src="img/logo.png" alt="Front-end - Html Css Javascript Logo @clipartmax.com" class="logo">
+    <ul class="navegacion">
+      <li class="item-navegacion"><a href="#servicios" class="link-navegacion">servicios</a></li>
+      <li class="item-navegacion"><a href="#portfolio" class="link-navegacion">portfolio</a></li>
+      <li class="item-navegacion"><a href="#equipo" class="link-navegacion">equipo</a></li>
+      <li class="item-navegacion"><a href="#contacto" class="link-navegacion">contacto</a></li>
+    </ul>
+  </header>
+
+  <main class="presentacion">
+    <p>&nbsp;</p>
+    <h2>bienvenido a nuesto estudio</h2>
+    <h1>digital house</h1>
+    <a href="#contacto">ponerse en contacto</a>
+  </main>
+
+  <section class="servicios" id="servicios">
+    <p></p>
+    <h2>SERVICIOS</h2>
+    <h4>Conocé todas nuestras propuestas</h4>
+    <div class="articulos">
+      <article class="servicio">
+        <div class="borde-circular">
+          <i class="fas fa-shopping-cart icono"></i>
+        </div>
+        <h4>E-commerce</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde non corrupti, quis possimus odio harum explicabo, hic, eaque quas, aliquam earum numquam eius beatae. Similique sunt sequi quas repellendus magni?</p>
+      </article>
+      <article class="servicio">
+        <div class="borde-circular">
+          <i class="fas fa-laptop icono"></i>
+        </div>
+        <h4>Responsive</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic impedit eveniet culpa praesentium, aperiam iusto tempora eaque. Praesentium adipisci obcaecati error, veniam voluptatem debitis cupiditate, necessitatibus itaque, quaerat maxime consectetur.</p>
+      </article>
+      <article class="servicio">
+        <div class="borde-circular">
+          <i class="fas fa-lock icono"></i>
+        </div>
+        <h4>Seguridad</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eveniet vitae sequi est ducimus nam eius eum error delectus et. Nesciunt quia mollitia voluptatum iste sunt! Dolorem quam, alias quisquam.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <h2>contacto</h2>
+    <h4>Mandanos tu consulta</h4>
+    <p> </p>
+    <div class="form-container">
+      <form action="procesar.html" method="POST">
+        <p>
+          <input type="text" name="nombre_apellido" placeholder="Nombre y Apellido" required>
+        </p>
+        <p>
+          <input type="date" name="fecha_nacimiento" placeholder="Fecha de nacimiento (dd/mm/aaaa)" required>
+        </p>
+        <p>
+          <input type="tel" name="prefijo" placeholder="011" size="5" required>
+          <input type="tel" name="telefono" placeholder="45670000" required>
+        </p>
+        <p>
+          <input type="email" name="email" placeholder="mail@dominio.com" required>
+        </p>
+        <p>
+          <input type="password" name="password" placeholder="contaseña" required>
+        </p>
+        <p>
+          <label>Hobbies</label>
+          <br>
+          <input type="checkbox" name="hobbies" value="dep" id="deportes">
+          <label for="deportes"> Deportes </label>
+          <input type="checkbox" name="hobbies" value="mus" id="musica">
+          <label for="musica"> Música </label>
+          <input type="checkbox" name="hobbies" value="mod" id="modelismo">
+          <label for="modelismo"> Modelismo </label>
+        </p>
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

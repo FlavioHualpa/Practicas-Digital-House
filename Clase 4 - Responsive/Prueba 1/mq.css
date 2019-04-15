@@ -1,0 +1,29 @@
+body {
+  font-family: arial;
+  font-size: 24pt;
+}
+
+.p1 {
+  color: #c00000;
+}
+
+@media only screen
+and (min-width: 480px)
+and (max-width: 767px)
+{
+  .p2 {
+    color: #0000c0;
+  }
+}
+
+@media only screen
+and (min-width: 768px)
+{
+  .p1 {
+    text-decoration: underline;
+  }
+
+  .p3 {
+    color: #00c000;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registro</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="encabezado">
+        <img src="img/logo.png" alt="logo" class="logo">
+        <ul class="menu-izq">
+          <li class="menu-item">SMARTPHONES</li>
+          <li class="menu-item">TABLETS</li>
+          <li class="menu-item">COMPUTADORAS</li>
+        </ul>
+        <ul class="menu-der">
+          <li class="menu-item">Login</li>
+          <li class="menu-item">Registro</li>
+        </ul>
+      </header>
+      <section>
+        <div class="container2">
+          <br>
+          <h1 style="text-align: center;">BIENVENIDO</h1>
+          <form action="procesar.html" method="post">
+            <p>
+              <label for="nombre">Nombre</label><br>
+              <input type="text" name="nombre" id="nombre" placeholder="Juan Pérez" required>
+              <span class="error" id="falta-nombre">Obligatorio</span>
+            </p>
+            <p>
+              <label for="email">Email</label><br>
+              <input type="email" name="email" id="email" placeholder="tu@mail.com" required>
+              <span class="error" id="falta-email">Obligatorio</span>
+            </p>
+            <p>
+              <label for="pass">Contraseña</label><br>
+              <input type="password" name="pass" id="pass" required>
+              <span class="error" id="falta-pass">Obligatorio</span>
+            </p>
+            <h2>País de nacimiento</h2>
+            <p>
+              <select name="pais" required>
+                <option value="arg">Argentina</option>
+                <option value="bol">Bolivia</option>
+                <option value="bra">Brasil</option>
+                <option value="chi">Chile</option>
+                <option value="col">Colombia</option>
+                <option value="ecu">Ecuador</option>
+                <option value="mex">México</option>
+                <option value="par">Paraguay</option>
+                <option value="per">Perú</option>
+                <option value="ven">Venezuela</option>
+              </select>
+              <span class="error" id="falta-pais">Obligatorio</span>
+            </p>
+            <h2>Género</h2>
+            <p>
+              <input type="radio" name="genero" value="masc" style="width: auto;"><span> Masculino</span>
+              <input type="radio" name="genero" value="fem" style="width: auto;"><span> Femenino</span>
+              <input type="radio" name="genero" value="otro" style="width: auto;"><span> Prefiero no decirlo</span>
+            </p>
+            <h2>Hobbies</h2>
+            <p>
+              <input type="checkbox" name="hobby" value="guitarra" style="width: auto;"><span> Guitarra&nbsp;&nbsp;</span>
+              <input type="checkbox" name="hobby" value="futbol" style="width: auto;"><span> Fútbol&nbsp;&nbsp;</span>
+              <input type="checkbox" name="hobby" value="tenis" style="width: auto;"><span> Tenis&nbsp;&nbsp;</span>
+              <input type="checkbox" name="hobby" value="programacion" style="width: auto;"><span> Programación</span>
+            </p>
+            <h2>Dejanos tus comentarios</h2>
+            <textarea name="coment" rows="8" cols="80"></textarea>
+            <br>
+            <br>
+            <input type="checkbox" name="acepto-terminos" value="acepto" style="width: auto;"><span> Acepto los términos y condiciones</span>
+            <br>
+            <br>
+            <button type="submit" name="registrarme" class="boton-enviar">Registrarme</button>
+            <button type="reset" name="cancelar" class="boton-cancelar">Cancelar</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

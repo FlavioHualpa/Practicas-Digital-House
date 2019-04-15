@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="encabezado">
+        <img src="img/logo.png" alt="logo" class="logo">
+        <ul class="menu-izq">
+          <li class="menu-item">SMARTPHONES</li>
+          <li class="menu-item">TABLETS</li>
+          <li class="menu-item">COMPUTADORAS</li>
+        </ul>
+        <ul class="menu-der">
+          <li class="menu-item">Login</li>
+          <li class="menu-item">Registro</li>
+        </ul>
+      </header>
+      <section>
+        <div class="container2">
+          <br>
+          <h1 style="text-align: center;">BIENVENIDO</h1>
+          <form action="registro.html" method="post">
+            <p>
+              <label for="email">Email</label><br>
+              <input type="email" name="email" id="email" placeholder="tu@mail.com">
+            </p>
+            <p>
+              <label for="pass">Contraseña</label><br>
+              <input type="password" name="pass" id="pass">
+            </p>
+            <p style="text-align: right;">
+              <input type="checkbox" name="recordar" style="width: auto;"> Recordarme
+            </p>
+            <p class="error">La combinación ingresada de email y contraseña no es válida.</p>
+            <button type="submit" name="enviar" class="boton-enviar">Ingresar</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
