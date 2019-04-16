@@ -5,7 +5,9 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-body {
+.contenedor {
+  width: 100vw;
+  height: 100vh;
   background-image: url(../img/emilia-home.jpg);
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -33,6 +35,7 @@ body {
   font-family: 'Work Sans', sans-serif;
   font-size: 50px;
   font-weight: 300;
+  line-height: 1em;
   padding-left: 50px;
   padding-top: 140px;
 }
