@@ -6,29 +6,71 @@
 }
 
 .contenedor {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  background-image: url(../img/emilia-home.jpg);
   background-repeat: no-repeat;
   background-position: bottom right;
   background-attachment: fixed;
   background-size: 80%;
 }
 
-.menu {
+.home {
+  background-image: url(../img/emilia-home.jpg);
+}
+
+.about {
+  background-image: url(../img/emilia-about.jpg);
+}
+
+.music {
+  background-image: url(../img/emilia-music-top.jpg);
+  background-position: top left;
+  background-size: 100%;
+}
+
+.barra-hori {
+  padding: 20px 15px;
+  background-color: rgba(250, 250, 250, 0.4);
+  overflow: hidden;
+}
+
+.menu-vert {
   padding-left: 50px;
   padding-top: 30px;
 }
 
-.menu li {
+.menu-vert li {
   list-style-type: none;
   padding-bottom: 20px;
   font-size: 20px;
 }
 
-.menu li a {
+.menu-vert li a,
+.menu-hori li a,
+.externos a {
   text-decoration: none;
   color: black;
+}
+
+.menu-hori {
+  float: right;
+}
+
+.menu-hori li {
+  list-style-type: none;
+  padding: 0 10px;
+  float: left;
+  border-left: 2px solid black;
+}
+
+.menu-hori li:last-child {
+  border-right: 2px solid black;
+}
+
+.externos {
+  text-align: right;
+  padding: 20px 10px;
+  font-size: 20px;
 }
 
 .emilia {
@@ -47,4 +89,213 @@
   position: absolute;
   bottom: 100px;
   width: 100%;
+}
+
+.about-emilia {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 78px;
+  line-height: 1em;
+  padding-left: 10px;
+  padding-top: 80px;
+}
+
+.about-heading,
+.about-credit {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  line-height: 1.3em;
+  color: LightSeaGreen;
+  padding-left: 50px;
+}
+
+.about-heading {
+  font-size: 28px;
+  padding-top: 80px;
+}
+
+.about-credit {
+  font-size: 16px;
+  padding-top: 40px;
+}
+
+.side-padding {
+  padding: 0 10px;
+}
+
+.side-padding h4 {
+  font-family: 'Raleway';
+  font-size: 24px;
+  padding-top: 50px;
+}
+
+.side-padding h5 {
+  font-size: 20px;
+  font-weight: 300;
+  padding-top: 40px;
+  color: LightSeaGreen;
+}
+
+.side-padding p {
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.side-padding p a {
+  padding-top: 0px;
+  text-decoration: none;
+  color: #c0c0c0;
+}
+
+.side-padding iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  padding-top: 10px;
+}
+
+.music-title,
+.contact-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 75px;
+  padding-top: 60px;
+}
+
+.media-links {
+  font-family: 'Open Sans';
+  font-size: 16px;
+  padding-top: 40px;
+}
+
+.lista-links {
+  list-style-type: none;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.lista-links li a {
+  text-decoration: none;
+  color: #c0c0c0;
+}
+
+#album,
+#organicLove,
+#streetLight {
+  padding-top: 80px;
+}
+
+#album h4,
+#organicLove h4,
+#streetLight h4 {
+  font-family: 'Raleway';
+  font-size: 24px;
+  line-height: 1em;
+}
+
+#album img,
+#organicLove iframe,
+#streetLight iframe {
+  padding-top: 20px;
+}
+
+#album ul {
+  padding-top: 10px;
+  padding-left: 10px;
+  list-style-type: none;
+}
+
+#album ul li {
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+#album a,
+#organicLove a,
+#streetLight a {
+  text-decoration: none;
+  color: #c0c0c0;
+  padding-top: 20px;
+  display: block;
+}
+
+#organicLove p,
+#streetLight p {
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+/**********************************/
+/* CONTENIDO EXTRA ****************/
+/**********************************/
+
+.fondo-gris {
+  background-color: #404040;
+  font-family: 'Open Sans';
+}
+
+.marco-centrado {
+  width: calc(100% - 160px);
+  height: calc(100vh - 160px);
+  margin: 80px;
+  border: 1px solid #808080;
+  background-image: url(../img/emilia-about.jpg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-color: #f8f8f8;
+}
+
+.marco-centrado h1 {
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.marco-centrado section {
+  width: 34%;
+  padding: 20px;
+}
+
+.marco-centrado section p {
+  color: #606060;
+  font-size: 18px;
+}
+
+.marco-centrado form {
+  padding-top: 30px;
+}
+
+.columnas {
+  overflow: hidden;
+}
+
+.columna {
+  float: left;
+  width: 50%;
+  padding-right: 20px;
+}
+
+.campo-form {
+  padding-bottom: 10px;
+}
+
+.campo-form label {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.campo-form input,
+.campo-form textarea,
+.campo-form select {
+  width: 100%;
+  border: 1px solid #c0c0c0;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.campo-form input[type=radio] {
+  width: auto;
+}
+
+form button {
+  padding: 2px 20px;
+  font-size: 18px;
 }

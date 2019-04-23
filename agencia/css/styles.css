@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.encab-fijo {
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 0 4px #808080;
+  z-index: 100;
+}
+
+.navegacion {
+  width: 94%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.logo {
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  padding-top: 21px;
+}
+
+.menu-izq {
+  float: left;
+  overflow: hidden;
+  list-style-type: none;
+  margin-left: 30px;
+}
+
+.menu-izq li,
+.menu-der li {
+  padding: 25px 0;
+  margin-left: 35px;
+  float: left;
+  position: relative;
+  x-transition: 0.3s;
+}
+
+.menu-izq li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  x-transition: 0.3s;
+}
+
+.menu-izq li:hover::after {
+  border-bottom: 2px solid #404040;
+}
+
+.menu-izq li a,
+.menu-der li a,
+.menu-hamb li a {
+  color: #606060;
+  text-decoration: none;
+}
+
+.menu-izq li a:hover,
+.menu-der li a:hover,
+.menu-hamb li a:hover {
+  color: #c00000;
+}
+
+.menu-der {
+  float: right;
+  overflow: hidden;
+  list-style-type: none;
+}
+
+.menu-der #btn-rojo {
+  padding: 10px 20px;
+  background-color: #c00000;
+  color: white;
+  border-radius: 6px;
+}
+
+.menu-der #btn-rojo:hover {
+  background-color: #f00000;
+}
+
+.menu-hamb {
+  float: right;
+  list-style-type: none;
+  display: none;
+}
+
+.menu-hamb li {
+  padding: 16px 0;
+  font-size: 30px;
+}
+
+
+
+/**** SECCION 1 ****/
+
+.contenedor {
+  width: 100%;
+  position: relative;
+}
+
+.fondo-purpura {
+  position: absolute;
+  width: 70%;
+  height: 130vh;
+  top: 0;
+  left: 0;
+  background-color: #352961;
+  border-bottom-right-radius: 15%;
+  z-index: -1;
+}
+
+.intro-1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 350px;
+}
+
+.bsi-rdn {
+  border-top-left-radius: 40%;
+}
+
+.carusel {
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  height: 535px;
+}
+
+.carusel .imagenes-carusel {
+  position: absolute;
+  overflow: hidden;
+  width: 2000px;
+  height: 535px;
+}
+
+.carusel .imagenes-carusel img,
+.carusel .imagenes-carusel div {
+  width: 500px;
+  height: auto;
+  float: left;
+}
+
+.carusel .imagenes-carusel div {
+  padding-right: 100px;
+}
+
+.carusel .imagenes-carusel h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 40px;
+  padding-top: 100px;
+}
+
+.carusel .imagenes-carusel p {
+  color: #c0c0c0;
+  line-height: 1.5em;
+  padding-top: 10px;
+}
+
+.carusel .imagenes-carusel a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 40px;
+  padding: 12px 45px;
+  border: 2px solid white;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.carusel .imagenes-carusel a:hover {
+  background-color: white;
+  color: #352961;
+}
+
+.nav-carusel {
+  position: absolute;
+  bottom: -20px;
+  display: flex;
+  justify-content: center;
+  width: 500px;
+}
+
+.nav-carusel i {
+  padding: 20px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-carusel i:hover {
+  box-shadow: 0 0 8px -4px #808080;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 900px)
+{
+  .menu-izq {
+    margin-left: 0;
+  }
+
+  .menu-izq li,
+  .menu-der li {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px)
+{
+  .menu-izq,
+  .menu-der {
+    display: none;
+  }
+
+  .menu-hamb {
+    display: inherit;
+  }
+}

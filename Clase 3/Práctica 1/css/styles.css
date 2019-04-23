@@ -60,23 +60,8 @@ main p {
   height: 300px;
 }
 
-section.servicios p {
-  height: 150px;
-}
-
-section.servicios h4,
-section.contacto h4 {
-  font-size: 22px;
-  font-style: italic;
-}
-
 main h2 {
   font-size: 30px;
-}
-
-section.servicios h2,
-section.contacto h2 {
-  font-size: 40px;
 }
 
 main h1 {
@@ -95,27 +80,50 @@ main a {
   font-size: 20px;
 }
 
-/* section.servicios */
-.servicios {
+main a:hover {
+  background-color: #ff8000;  
+}
+
+#servicios p {
+  height: 150px;
+}
+
+#servicios h2,
+#portfolio h2,
+#equipo h2,
+#contacto h2 {
+  font-size: 40px;
+}
+
+#servicios h4,
+#portfolio h4,
+#equipo h4,
+#contacto h4 {
+  font-size: 24px;
+  font-style: italic;
+}
+
+/* #servicios */
+#servicios {
   height: 800px;
   text-align: center;
 }
 
-/* section.servicios div */
+/* #servicios div */
 .articulos {
   overflow: hidden;
   width: 90%;
   margin: 60px auto 0 auto;
 }
 
-/* section.servicios div  article */
+/* #servicios div article */
 .servicio {
   float: left;
   width: 28%;
   margin: 0 2.5%;
 }
 
-/* section.servicios div  article div */
+/* #servicios div article div */
 .borde-circular
 {
   width: 130px;
@@ -125,7 +133,7 @@ main a {
   margin: 0 auto 20px auto;
 }
 
-/* section.servicios div  article div i */
+/* #servicios div article div i */
 .icono
 {
   font-size: 72px;
@@ -133,26 +141,92 @@ main a {
   padding-top: 24px;
 }
 
-/* section.contacto */
-.contacto {
+#portfolio {
+  text-align: center;
+  padding: 80px 5%;
+  background-color: #c0c0c0;
+}
+
+#equipo {
+  text-align: center;
+  padding: 80px 15%;
+  background-color: white;
+}
+
+#portfolio div,
+#equipo div {
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+#portfolio article {
+  width: 30%;
+  margin-right: 5%;
+  margin-bottom: 30px;
+  background-color: white;
+  float: left;
+}
+
+#equipo article {
+  width: 26%;
+  margin-right: 11%;
+  margin-bottom: 30px;
+  float: left;
+}
+
+#portfolio article:nth-child(3n),
+#equipo article:nth-child(3n) {
+  margin-right: 0;
+}
+
+#portfolio article img {
+  width: 100%;
+  height: auto;
+}
+
+#equipo article img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 6px #505050;
+  border-radius: 50%;
+}
+
+#portfolio article h4,
+#equipo article h4 {
+  font-style: normal;
+}
+
+#equipo article h4 {
+  margin-top: 12px;
+}
+
+#portfolio article p,
+#equipo article p {
+  color: #808080;
+  line-height: 1.2em;
+  margin: 5px 0 15px 0;
+}
+
+/* #contacto */
+#contacto {
   height: 800px;
   text-align: center;
   background-image: url(../img/map-image.png);
   background-position: center;
   background-size: cover;
-  background-color: #AAA;
+  background-color: #aaa;
 }
 
-section.contacto h2 {
+#contacto h2 {
   text-transform: uppercase;
   padding-top: 100px;
 }
 
-section.contacto h4 {
+#contacto h4 {
   padding-bottom: 40px;
 }
 
-section.contacto p {
+#contacto p {
   margin-top: 12px;
 }
 

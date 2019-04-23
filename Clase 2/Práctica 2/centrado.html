@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Emilia Cole</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="fondo-gris">
+  <div class="marco-centrado">
+    <section>
+      <h1>EMILIA COLE</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deleniti repudiandae quibusdam aperiam molestiae vitae, necessitatibus ex iste. Dolorem, voluptate sint ea sed aspernatur beatae odit atque est mollitia recusandae!</p>
+      <form action="procesar.html" method="post">
+        <h4>ENVIANOS TUS COMENTARIOS</h4>
+        <br>
+        <div class="columnas">
+          <div class="columna">
+            <div class="campo-form">
+              <label for="nombre">nombre</label>
+              <input type="text" name="nombre" id="nombre">
+            </div>
+            <div class="campo-form">
+              <label for="email">email</label>
+              <input type="email" name="email" id="email">
+            </div>
+            <div class="campo-form">
+              <label>sexo</label>
+              <br>
+              <input type="radio" name="sexo" id="mujer" value="mujer">
+              <label for="mujer"> mujer</label>
+              <input type="radio" name="sexo" id="hombre" value="hombre">
+              <label for="hombre"> hombre</label>
+            </div>
+          </div>
+          <div class="columna">
+            <div class="campo-form">
+              <label for="apellido">apellido</label>
+              <input type="text" name="apellido" id="apellido">
+            </div>
+            <div class="campo-form">
+              <label for="fecha">fecha de tu visita</label>
+              <input type="date" name="fecha" id="fecha">
+            </div>
+            <div class="campo-form">
+            </div>
+          </div>
+        </div>
+        <div class="campo-form">
+          <label for="comentario">tus comentarios</label>
+          <textarea name="comentario" id="comentario" cols="30" rows="7"></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
