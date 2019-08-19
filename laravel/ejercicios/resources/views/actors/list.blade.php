@@ -1,4 +1,4 @@
-@extends('peliculaLayout')
+@extends('../layouts/peliculaLayout')
 
 @section('titulo')
 <title>Actores</title>

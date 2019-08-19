@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'surname', 'phone', 'email', 'avatar', 'password',
     ];
 
     /**
@@ -36,4 +36,21 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function nombreCompleto() : string
+    {
+      return $this->name . ' ' . $this->surname;
+   }
+
+   public function avatarStyle() : string
+   {
+      if ($this->avatar) {
+         return 'style="
+            background-image: url(/storage/' . $this->avatar  . ');
+            background-position: center;
+            background-size: cover;"
+         ';
+      }
+      return '';
+   }
 }

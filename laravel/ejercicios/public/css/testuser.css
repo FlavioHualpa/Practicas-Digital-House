@@ -51,7 +51,8 @@
 }
 
 .campo-form label {
-  width: 100%;
+  display: block;
+  margin-bottom: 3px;
 }
 
 .campo-form input,
@@ -80,6 +81,10 @@
   transform: scale(1.3);
 }
 
+.campo-form input[type="submit"] {
+   margin-top: 30px;
+}
+
 .campo-form .radio-label {
   width: auto;
   margin-left: 3px;
@@ -99,4 +104,23 @@
 .campo-form p {
   margin-top: 3px;
   color: #D40808;
+}
+
+.related-info {
+   width: 650px;
+   padding: 12px 12px 12px 30px;
+   background-color: #f0f0f0;
+   border-left: 4px solid #e09000;
+   overflow: hidden;
+}
+
+.panel-info {
+   width: 300px;
+   float: left;
+}
+
+.portrait {
+   width: 240px;
+   border: 1px solid #d0d0d0;
+   padding-top: 300px;
 }

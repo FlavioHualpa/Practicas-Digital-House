@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Actor;
+use App\Movie;
+use App\Http\Requests\CreateActorRequest;
+use App\Http\Requests\UpdateActorRequest;
+use Auth;
 
 class ActorsController extends Controller
 {
@@ -24,7 +28,15 @@ class ActorsController extends Controller
    */
    public function create()
    {
-      //
+      if (Auth::user() == null) {
+         return redirect('/home');
+      }
+
+      $favoritas = Movie::orderBy('title')->get();
+
+      return view('actors.add',
+         [ 'favorites' => $favoritas ]
+      );
    }
 
    /**
@@ -33,9 +45,29 @@ class ActorsController extends Controller
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-   public function store(Request $request)
+   public function store(CreateActorRequest $request)
    {
-      //
+      if (Auth::user() == null) {
+         return redirect('/home');
+      }
+
+      if ($request->has('portrait')) {
+         $url = $request->file('portrait')->store('public');
+         $file = basename($url);
+      }
+      else {
+         $file = null;
+      }
+
+      Actor::create([
+         'first_name' => $request->first_name,
+         'last_name' => $request->last_name,
+         'portrait_url' => $file,
+         'rating' => rand(10, 95) / 10.0,
+         'favorite_movie_id' => $request->favorite
+      ]);
+
+      return redirect('/actores');
    }
 
    /**
@@ -47,7 +79,7 @@ class ActorsController extends Controller
    public function show($id)
    {
       $actor = Actor::find($id);
-      return view('actor', [ 'actor' => $actor ]);
+      return view('actors.details', [ 'actor' => $actor ]);
    }
 
    /**
@@ -58,7 +90,17 @@ class ActorsController extends Controller
    */
    public function edit($id)
    {
-      //
+      if (Auth::user() == null) {
+         return redirect('/home');
+      }
+
+      $actor = Actor::find($id);
+      $favoritas = Movie::orderBy('title')->get();
+
+      return view(
+         'actors.edit',
+         [ 'actor' => $actor, 'favorites' => $favoritas ]
+      );
    }
 
    /**
@@ -68,9 +110,32 @@ class ActorsController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-   public function update(Request $request, $id)
+   public function update(UpdateActorRequest $request, $id)
    {
-      //
+      if (Auth::user() == null) {
+         return redirect('/home');
+      }
+
+      $actor = Actor::find($id);
+
+      if ($request->has('portrait')) {
+         $url = $request->file('portrait')->store('public');
+         $file = basename($url);
+      }
+      else {
+         $file = $actor->portrait_url;
+      }
+
+      $actor->update([
+         'id' => $request->id,
+         'first_name' => $request->first_name,
+         'last_name' => $request->last_name,
+         'portrait_url' => $file,
+         'rating' => $request->rating,
+         'favorite_movie_id' => $request->favorite
+      ]);
+
+      return redirect('/actor/' . $id);
    }
 
    /**
@@ -81,7 +146,9 @@ class ActorsController extends Controller
    */
    public function destroy($id)
    {
-      //
+      Actor::find($id)->delete();
+
+      return redirect('/actores/');
    }
 
    public function directory()
@@ -91,7 +158,7 @@ class ActorsController extends Controller
          orderBy('last_name')->
          paginate(10);
       return view(
-         'actores',
+         'actors.list',
          [ 'actores' => $actores ]
       );
    }
@@ -106,7 +173,7 @@ class ActorsController extends Controller
          orderBy('last_name')->
          paginate(10);
       return view(
-         'actores',
+         'actors.list',
          [ 'actores' => $actores, 'busqueda' => $req->get('busqueda') ]
       );
    }

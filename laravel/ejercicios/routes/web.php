@@ -30,7 +30,10 @@ Route::get('sumar/{a}/{b}/{c?}', function ($a, $b, $c = 0) {
    return 'Debe proporcionar valores numericos.';
 });
 
-Route::get('/peliculas', function() {
+Route::get('/peliculas', 'MoviesController@index');
+
+/*
+function() {
    $peliculas = [
       [
          'titulo' => 'Avatar',
@@ -59,8 +62,12 @@ Route::get('/peliculas', function() {
       [ 'peliculas' => $peliculas ]
    );
 });
+*/
 
-Route::get('/peliculas/{id}', function($id) {
+Route::get('/peliculas/{id}', 'MoviesController@show');
+
+/*
+function($id) {
    $peliculas = [
       [
          'titulo' => 'Avatar',
@@ -89,6 +96,7 @@ Route::get('/peliculas/{id}', function($id) {
       [ 'id' => $id, 'peliculas' => $peliculas ]
    );
 });
+*/
 
 Route::get('/actores', 'ActorsController@directory');
 
@@ -99,3 +107,28 @@ Route::get('/actores/buscar', 'ActorsController@search');
 Route::get('/registracion', 'UsuariosController@create');
 
 Route::post('/registracion', 'UsuariosController@store');
+
+Route::get('/actors/add', 'ActorsController@create');
+
+Route::post('/actors/add', 'ActorsController@store');
+
+Route::get('/actor/{id}/edit', 'ActorsController@edit');
+
+Route::put('/actor/{id}', 'ActorsController@update');
+
+Route::delete('/actor/{id}', 'ActorsController@destroy');
+
+Route::get('/movies/add', 'MoviesController@create');
+
+Route::post('/peliculas', 'MoviesController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/user/profile', 'UsersController@profile');
+
+Route::get('/tests', function () {
+  // return App::getLocale();
+  return __('otros.Login');
+});
